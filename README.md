@@ -1,3 +1,6 @@
+> [!WARNING]
+> Folio is in alpha. Expect bugs, missing features and breaking changes between versions. Keep backups of important documents, and please report any problems you run into.
+
 # Folio
 
 Write [Typst](https://typst.app) documents like a word processor or as source code with a live PDF preview. Folio is a native desktop editor. **Simple** mode hides the markup and gives you formatting buttons and document templates. **Code** mode gives you the `.typ` source with completion, diagnostics, and scroll sync. Both modes edit the same files, and you can switch at any time.
