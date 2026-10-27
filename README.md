@@ -7,18 +7,18 @@ Folio compiles documents itself, so it works offline with no separate Typst inst
 ![Folio in Simple mode](simple-mode.png)
 > Folio in Simple mode, editing `main.typ` with the formatting ribbon and live page view.
 
-## Download Folio 0.3.5
+## Download Folio 0.3.6
 
 | System | Download |
 | --- | --- |
-| macOS (Apple Silicon) | [Disk image (.dmg)](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.5/Folio-0.3.5-macos-arm64.dmg) · [Zip](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.5/Folio-0.3.5-macos-arm64.zip) |
-| Windows (x64) | [Installer (.exe)](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.5/Folio-0.3.5-windows-x64-setup.exe) · [Portable zip](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.5/Folio-0.3.5-windows-x64.zip) |
-| Ubuntu / Debian | [folio_0.3.5-1_amd64.deb](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.5/folio_0.3.5-1_amd64.deb) |
-| Fedora | [folio-0.3.5-1.x86_64.rpm](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.5/folio-0.3.5-1.x86_64.rpm) |
-| Arch Linux | [folio-0.3.5-1-x86_64.pkg.tar.zst](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.5/folio-0.3.5-1-x86_64.pkg.tar.zst) |
-| Other Linux | [Folio-0.3.5-linux-x64.tar.gz](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.5/Folio-0.3.5-linux-x64.tar.gz) |
+| macOS (Apple Silicon) | [Disk image (.dmg)](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.6/Folio-0.3.6-macos-arm64.dmg) · [Zip](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.6/Folio-0.3.6-macos-arm64.zip) |
+| Windows (x64) | [Installer (.exe)](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.6/Folio-0.3.6-windows-x64-setup.exe) · [Portable zip](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.6/Folio-0.3.6-windows-x64.zip) |
+| Ubuntu / Debian | [folio_0.3.6-1_amd64.deb](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.6/folio_0.3.6-1_amd64.deb) |
+| Fedora | [folio-0.3.6-1.x86_64.rpm](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.6/folio-0.3.6-1.x86_64.rpm) |
+| Arch Linux | [folio-0.3.6-1-x86_64.pkg.tar.zst](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.6/folio-0.3.6-1-x86_64.pkg.tar.zst) |
+| Other Linux | [Folio-0.3.6-linux-x64.tar.gz](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.6/Folio-0.3.6-linux-x64.tar.gz) |
 
-Checksums: [SHA256SUMS.txt](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.5/SHA256SUMS.txt) · Older versions: [Releases](https://github.com/Turtlezztz/folio-releases/releases)
+Checksums: [SHA256SUMS.txt](https://github.com/Turtlezztz/folio-releases/releases/download/v0.3.6/SHA256SUMS.txt) · Older versions: [Releases](https://github.com/Turtlezztz/folio-releases/releases)
 
 ## Two ways to write
 
@@ -52,33 +52,36 @@ Folio asks which one you want on first launch. Switch any time with the **Simple
 
 Folio is a local editor. Nothing leaves your computer unless you download a dictionary, package or component, open the Typst Universe catalogue, send a message to the assistant (which goes to the provider you chose), or connect an external agent (which shares the open document with that agent and whatever service it uses).
 
-## What's new in 0.3.5
+## What's new in 0.3.6
 
-- **Connect your own AI agent.** Claude Code, Codex or any other MCP client can now work with the document open in Folio: read it, see compiler problems and page screenshots, and propose edits. Turn it on in Settings › Assistant › External agents and click **Copy setup instructions**. Proposed edits show up as changes you accept or reject, like the built-in assistant's. The built-in assistant now uses an Anthropic or OpenAI API key only; it no longer runs Claude Code or Codex itself.
-- **Documents split over several files.** The Outline, word count, heading search and cross-reference lists now follow `#include` and `#import`, so they cover the whole document, not just the file you're editing. Clicking a heading from another file opens that file.
-- **Pick the main file from the project tree.** Hover any `.typ` file and click **Set as Main File**, in both Simple and Code mode.
-- **Simpler new projects.** New projects only ask for a name and are created in your projects folder (`Documents/Folio Projects`, or the folder you choose in Settings › Project folder). Joining a shared project no longer asks you to pick a folder.
-- **Help › Report an Issue.** Opens a diagnostics report you can review, copy or save, and a button that opens a pre-filled issue on GitHub. File names, paths and keys are left out unless you choose to include them.
-- **Plots work offline.** The plotting packages ship with Folio, so plots render on a fresh install with no internet, and plots made with the older Simple mode dialog stay editable.
-- **Fixes.** The preview now recompiles after the first edits in a newly opened project, and many smaller fixes.
+- **Simple mode works like Word and never shows code.** Pages always match the exported PDF. Content Folio can't edit as text shows as its picture, and a part with a mistake shows a "Couldn't show this part" card you can repair or keep as text. Navigation, search, comments, spelling and the assistant show the text the reader sees.
+- **Equations edited on the page.** A Word-like equation editor: type `a/b` for a fraction and press Tab to move between slots, with a structures gallery on the Math tab. The math dialogs use the same field.
+- **Captions, cross-references and bookmarks.** Insert Caption, Cross-reference and Bookmark dialogs that list items by their text, with field shading (View › Field Shading) and F9 to update.
+- **Tables, styles and properties.** Merge and split cells, cell alignment, table styles and column widths you drag on the page. Modify Style, Document Properties with the template's settings, heading numbering, section breaks and header/footer options. Clicking an object shows its settings in a Properties pane, and Insert › Objects lists built-in objects and add-ins.
+- **Word import and export.** Tracked changes in a Word file can be accepted or kept as suggestions. Exported equations are Word equations, and cross-references are Word fields.
+- **Join a shared document in the app** by pasting its link. Comments and replies are shared in Simple mode collaboration too.
+- **Pasted images are saved into the project.**
+- **Smoother scrolling.** Momentum scrolling on touchpads, an animated jump from the preview to the code, and the preview keeps your reading position when you resize or zoom.
+- **Vim mode.** Command completion and Folio commands, and yanks and the cursor stay in sync with the system clipboard.
+- **Fixes.** Commits without a message, Simple view keeps its scroll position when compiling fails, and Unicode text after an editor sync no longer breaks.
 
 ## Install
 
 On first launch Folio offers to download its PDF renderer (PDFium), language service (Tinymist) and the Typst documentation (about 55 MB). You can also do that later in Settings › Components.
 
-**macOS (Apple Silicon):** open `Folio-0.3.5-macos-arm64.dmg` and drag Folio to Applications. Folio is not notarized yet, so macOS blocks it the first time. Go to System Settings › Privacy & Security and click **Open Anyway**.
+**macOS (Apple Silicon):** open `Folio-0.3.6-macos-arm64.dmg` and drag Folio to Applications. Folio is not notarized yet, so macOS blocks it the first time. Go to System Settings › Privacy & Security and click **Open Anyway**.
 
-**Windows (x64):** run `Folio-0.3.5-windows-x64-setup.exe`. The installer is not signed yet, so SmartScreen may show "Windows protected your PC". Click **More info › Run anyway**. `Folio-0.3.5-windows-x64.zip` is a portable copy: unzip it and run `folio.exe`.
+**Windows (x64):** run `Folio-0.3.6-windows-x64-setup.exe`. The installer is not signed yet, so SmartScreen may show "Windows protected your PC". Click **More info › Run anyway**. `Folio-0.3.6-windows-x64.zip` is a portable copy: unzip it and run `folio.exe`.
 
-**Ubuntu / Debian:** `sudo apt install ./folio_0.3.5-1_amd64.deb`
+**Ubuntu / Debian:** `sudo apt install ./folio_0.3.6-1_amd64.deb`
 
-**Fedora:** `sudo dnf install ./folio-0.3.5-1.x86_64.rpm`
+**Fedora:** `sudo dnf install ./folio-0.3.6-1.x86_64.rpm`
 
-**Arch Linux:** `sudo pacman -U folio-0.3.5-1-x86_64.pkg.tar.zst`
+**Arch Linux:** `sudo pacman -U folio-0.3.6-1-x86_64.pkg.tar.zst`
 
-**NixOS / Nix:** `nix run github:Turtlezztz/typst-editor/v0.3.5`, or add the flake's `packages.<system>.folio` (or `overlays.default`) to your configuration. It builds from source and uses Tinymist and PDFium from nixpkgs.
+**NixOS / Nix:** `nix run github:Turtlezztz/typst-editor/v0.3.6`, or add the flake's `packages.<system>.folio` (or `overlays.default`) to your configuration. It builds from source and uses Tinymist and PDFium from nixpkgs.
 
-**Other Linux:** unpack `Folio-0.3.5-linux-x64.tar.gz` and run `folio-0.3.5/folio`. The `share/` folder holds a desktop entry and icons for `~/.local/share`.
+**Other Linux:** unpack `Folio-0.3.6-linux-x64.tar.gz` and run `folio-0.3.6/folio`. The `share/` folder holds a desktop entry and icons for `~/.local/share`.
 
 The Linux packages need glibc 2.39 or newer (Ubuntu 24.04, Fedora 40, Debian 13 or later) and a Vulkan driver (`mesa-vulkan-drivers` on Ubuntu and Fedora, `vulkan-radeon`/`vulkan-intel`/`nvidia-utils` on Arch).
 
